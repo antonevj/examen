@@ -12,6 +12,7 @@ namespace ExamenParcial.Controllers
         public ActionResult Index()
         {
             return View();
+
         }
     }
 }
