@@ -14,6 +14,17 @@ namespace ExamenParcial.Controllers
             return View();
 
         }
+         [HttpGet]
+        public ActionResult Divisas()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Divisas(float divisa1, float divisa2)
+        {
+
+            return View();
+        }
 
       
     }

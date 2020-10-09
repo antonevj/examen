@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Divisas";
+}
+
+<article>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+            <h2> Taza Metabolismo Basal metodo Harris</h2>
+            <br />
+            @using (Html.BeginForm("Dv", "Divisas", FormMethod.Post))
+            {
+
+                <div class="row">
+                    <div class="col-sm-4">
+
+                        <label for="select_combos" class="col-form-label">COMBOS</label>
+
+                        <select name="select_combos" id="select_combos" class="form-control" onchange="combo();">
+
+                            <option value="0">Seleccione un combo...</option>
+                            <option value="1">combo1</option>
+                            <option value="2">combo2</option>
+                            <option value="3">combo3</option>
+                            <option value="4">combo4</option>
+
+                        </select>
+
+                        <br>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+            }
+            <br />
+            @*<small class="form-text text-black-50">Su Metabolismo es:</small>*@
+            <input type="text" class="form-control" value="@ViewBag.tmb" readonly />
+            <input type="text" class="form-control" value="@ViewBag.tmb" readonly />
+            <br />
+        </div>
+    </div>
+</article>
+
+
+
+
+
