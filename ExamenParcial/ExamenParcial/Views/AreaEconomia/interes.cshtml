@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "interes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@section Misestilos{
+
+
+    
+}
+
+
+<article>
+    <div class="row justify-content-center" style="border:medium">
+
+
+        <div class="card " style="width: 70rem;">
+            <img src="https://www.consumer.es/wp-content/uploads/2019/07/img_conversor-moneda.hd_-1280x720.jpg" class="card-img-top rounded-pill" alt="...">
+
+        </div>
+
+        <br />
+
+        <br />
+        
+
+        <div class="row justify-content-center">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header">Metodo Divine</div>
+
+
+                        <div class="card-body">
+                            <div class="form-check-inline">
+                                <input type="radio" id="simple" name="inte" value="simple" checked class="form-check-input" @(ViewBag.interes == "SIMPLE" ? "checked" : "") />
+                                <label for="simple" class="form-check-label">simple</label>
+                            </div>
+
+                            <div class="form-check-inline">
+                                <input type="radio" id="compuesto" name="inte" value="compuesta" class="form-check-input" @(ViewBag.interes == "COMPUESTO" ? "checked" : "") />
+                                <label for="compuesto" class="form-check-label">compuesto</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <h2>CALCULADORA DE INTERES </h2>
+                @using (Html.BeginForm("interes", "AreaEconomia", FormMethod.Post))
+                {
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                @Html.Label("capital", "capital")
+
+                                @Html.TextBox("capital", null, new
+                                {
+                                    @class = "form-control",
+                                    id = "idcapital",
+                                   // type = "number",
+                                    //step = 1,
+                                   required = "",
+                                    min = 0
+                                })
+
+                                <small class="form-text text-muted">
+                                    Ingrese su capital
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                @Html.Label("tasa", "tasa")
+
+                                @Html.TextBox("tasa", null, new
+                                {
+                                    @class = "form-control",
+                                    id = "idtasa",
+                                    type = "number",
+                                    step = 1,
+
+                                    min = 0,
+                                    required = String.Empty
+                                })
+
+                                <small class="form-text text-muted">
+                                    Ingrese la  tasa de interes
+                                </small>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                @Html.Label("tiempo", "tiempo")
+
+                                @Html.TextBox("tiempo", null, new
+                           {
+                               @class = "form-control",
+                               id = "idtiempo",
+                               type = "number",
+                               step = 1,
+                               min = 0,
+                               required = String.Empty
+                           })
+
+                                <small class="form-text text-muted">
+                                    Ingrese el tiempo en años
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <button type="submit" class="btn btn-primary form-control">
+                                Calcular
+                            </button>
+
+                        </div>
+
+
+
+
+                    </div>
+                }
+                <br />
+                <label>INTERES: </label>
+                <input type="text" class="form-control" value="@ViewBag.rpta"
+                       readonly />
+
+            </div>
+        </div>
+
+        <div class="row">
+            <h1>   </h1>
+            <p> </p>
+        </div>
+
+    </div>
+       
+
+</article>
+<br />
+
+
+
+
+
+
+
