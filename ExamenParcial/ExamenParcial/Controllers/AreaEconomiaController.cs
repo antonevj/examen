@@ -25,6 +25,8 @@ namespace ExamenParcial.Controllers
         [HttpPost]
         public ActionResult interes(float capital, float tasa, float tiempo, string inte)
         {
+           
+            
             float rpta;
 
             if (inte=="simple")
