@@ -9,21 +9,46 @@
         <div class="col-sm-8">
             <h2> Taza Metabolismo Basal metodo Harris</h2>
             <br />
-            @using (Html.BeginForm("Dv", "Divisas", FormMethod.Post))
+            @using (Html.BeginForm("Divisas", "AreaEconomia", FormMethod.Post))
             {
 
+
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="cantidad">Cantidad</label>
+                            <input type="number" class="form-control" name="cantidad" id="cantidad" value="@ViewBag.cantidad" />
+                            <small class="form-text text-black-50">Ingrese un numero</small>
+                        </div>
+                    </div>
 
-                        <label for="select_combos" class="col-form-label">COMBOS</label>
+                </div>
 
-                        <select name="select_combos" id="select_combos" class="form-control" onchange="combo();">
 
-                            <option value="0">Seleccione un combo...</option>
-                            <option value="1">combo1</option>
-                            <option value="2">combo2</option>
-                            <option value="3">combo3</option>
-                            <option value="4">combo4</option>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="select_combos1" class="col-form-label">COMBOS</label>
+                        <select name="select_combos1" id="select_combos1" class="form-control "  >
+                            <option value="0">Seleccione una Divisa</option>
+                            <option value="1">Nuevo Sol (PEN)</option>
+                            <option value="2">Dolaar Estadounidense (USD)</option>
+                            <option value="3">Euro(EUR)</option>
+                            <option value="4">Yen Japones (JPY)</option>
+
+                        </select>
+                        <br>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <label for="select_combos2" class="col-form-label">COMBOS</label>
+
+                        <select name="select_combos2" id="select_combos2" class="form-control" >
+
+                            <option value="0">Seleccione una Divisa</option>
+                            <option value="1">Nuevo Sol (PEN)</option>
+                            <option value="2">Dolar Estadounidense (USD)</option>
+                            <option value="3">Euro(EUR)</option>
+                            <option value="4">Yen Japones (JPY)</option>
 
                         </select>
 
@@ -33,15 +58,20 @@
 
                 </div>
 
-
-
-
+                <div class="row">
+                    <div class="col-sm-8">
+                        <button type="submit" class="btn btn-primary form-control">Calcular</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#" class="btn btn-danger form-control">Cancelar</a>
+                    </div>
+                </div>
 
             }
             <br />
             @*<small class="form-text text-black-50">Su Metabolismo es:</small>*@
-            <input type="text" class="form-control" value="@ViewBag.tmb" readonly />
-            <input type="text" class="form-control" value="@ViewBag.tmb" readonly />
+            <input type="text" class="form-control" value="@ViewBag.valor1" readonly />
+
             <br />
         </div>
     </div>
