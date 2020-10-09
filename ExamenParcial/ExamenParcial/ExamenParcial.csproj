@@ -305,6 +305,7 @@
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
     <Content Include="Views\AreaEconomia\Divisas.cshtml" />
+    <Content Include="Views\AreaLiteratura\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -314,7 +315,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AreaLiteratura\" />
     <Folder Include="Views\AreaPsicologia\" />
   </ItemGroup>
   <ItemGroup>

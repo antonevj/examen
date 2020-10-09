@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamenParcial.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,20 @@ namespace ExamenParcial.Controllers
         // GET: AreaLiteratura
         public ActionResult Index()
         {
-            return View();
+            using (var context = new pubsEntities())
+            {
+                //linkQ sintaxis de consulta
+                //  var clientes = (from e in context.Customers select e).ToList();
+
+                //linkQ. sintaxis de metodo
+
+                var titulos = context.titles.ToList();
+
+                return View(titulos);
+
+
+
+            }
         }
     }
 }

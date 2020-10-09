@@ -22,15 +22,15 @@ namespace ExamenParcial.Controllers
         }
 
         [HttpPost]
-        public ActionResult interes(float capital, float tasa, float tiempo, string promo1, string promo2)
+        public ActionResult interes(float capital, float tasa, float tiempo, string inte)
         {
             float rpta=0;
 
-            if (promo1 == "1")
+            if (inte == "A")
             {
                 rpta = (float)(capital * (tasa / 100) * tiempo);
             }
-            if(promo2=="2")
+            if(inte=="B")
             {
                 rpta = (float)(capital * (1 + (tasa / 100)) * tiempo);
             }
@@ -41,7 +41,7 @@ namespace ExamenParcial.Controllers
             ViewBag.rpta = rpta;
             ViewBag.capital = capital;
             ViewBag.tasa = tasa;
-           // ViewBag.inte = inte;
+            ViewBag.inte = inte;
             ViewBag.tiempo = tiempo;
 
             return View();
