@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>libros</h2>
+<article>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width:10%">ID</th>
+                        <th style="width:25%">tipo</th>
+                        <th style="width:20%">precio</th>
+                        <th style="width:25%">avances</th>
+                        <th style="width:20%">fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@item.title_id</td>
+
+                        <td>@item.type</td>
+                        <td>@item.price</td>
+                        <td>@item.advance</td>
+                        <td>@item.pubdate</td>
+                    </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</article>
+
+
+
+
+
