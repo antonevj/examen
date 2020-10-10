@@ -100,7 +100,7 @@ namespace ExamenParcial.Controllers
             ViewBag.select_combos2 = select_combos2;
             ViewBag.cantidad = cantidad;
             ViewBag.valor1 = valor1;
-            return View();
+            return View( );
         }
 
       
