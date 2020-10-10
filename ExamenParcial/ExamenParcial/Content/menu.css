@@ -1,0 +1,130 @@
+﻿body {
+}
+
+.banner-1 {
+    margin-top: 40px;
+    background: url(aa.png );
+    float: left;
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat; /* No se repetira */
+    background-size: cover; /* Imagen al 100% del ancho */
+    background-attachment: fixed; /* Posicion fija para la imagen */
+    text-align: center;
+    border-spacing: 10px 5px 20px 20px;
+    
+}
+
+
+
+.cuerpo{
+    background: url(fondo.png);
+    background-position: center;
+   
+    background-size: cover;
+    width: 100%;
+}
+
+
+.ancho-letras {
+    top: 200px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.letras-slider {
+    width: 80%;
+    margin: auto;
+}
+
+    .letras-slider h1 {
+        color: #fff;
+        font-family: rale;
+        font-size: 70px;
+    }
+
+    .letras-slider p {
+        color: #fff;
+        font-size: 20px;
+        font-family: rale;
+        padding-top: 50px;
+    }
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h4, h5, h6 {
+    text-transform: uppercase;
+    color: #444;
+    font-family: rale;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #333;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-top: 20px;
+    font-weight: normal;
+    color: #777;
+}
+
+h4 {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+h5 {
+    font-family: Lato, sans-serif;
+    line-height: 1.5;
+    font-weight: normal;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+p {
+    color: #888;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+}
+
+.wap {
+    width: 90%;
+    margin: auto;
+}
+
+.bienvenidos {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contenedor-columnas {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.columnasx3 {
+    width: 25%;
+    float: left;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+    .columnasx3 img {
+        width: 100%;
+    }
+
