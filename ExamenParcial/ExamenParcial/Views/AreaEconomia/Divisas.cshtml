@@ -7,69 +7,58 @@
 
     <div class="row justify-content-center">
         <div class="col-sm-8">
-            <h2> Taza Metabolismo Basal metodo Harris</h2>
+            <h2> divisas mas importantes del mundo.</h2>
             <br />
             @using (Html.BeginForm("Divisas", "AreaEconomia", FormMethod.Post))
             {
-
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            @Html.Label("cantidad", "cantidad")
+                            @Html.TextBox("cantidad", null, new { @class = "form-control", id = "cantidad", type = "number", step = 0.1, required = String.Empty, min = 0 })
+                            <small class="form-text text-black-50">Ingrese una cantidad </small>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="cantidad">Cantidad</label>
-                            <input type="number" class="form-control" name="cantidad" id="cantidad" value="@ViewBag.cantidad" />
-                            <small class="form-text text-black-50">Ingrese un numero</small>
+                            <label for="miselect">Cambio </label>
+                            @Html.DropDownList("select_combos1", new List<SelectListItem> {
+                                new SelectListItem { Text="Nuevo Sol (PEN)", Value="1" },
+                                new SelectListItem { Text="Dolaar Estadounidense (USD)",  Value="2" },
+                                new SelectListItem { Text="Euro(EUR)", Value="3" },
+                                new SelectListItem { Text="Yen Japones (JPY)", Value="4" },
+                            }, "Seleccione una Divisa", new { @class = "form-control", id = "select_combos1" })
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="miselect">Tipo de cambio </label>
+                            @Html.DropDownList("select_combos2", new List<SelectListItem> {
+                                new SelectListItem { Text="Nuevo Sol (PEN)", Value="1" },
+                                new SelectListItem { Text="Dolaar Estadounidense (USD)",  Value="2" },
+                                new SelectListItem { Text="Euro(EUR)", Value="3" },
+                                new SelectListItem { Text="Yen Japones (JPY)", Value="4" },
+                            }, "Seleccione una Divisa", new { @class = "form-control", id = "select_combos2" })
                         </div>
                     </div>
 
                 </div>
-
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <label for="select_combos1" class="col-form-label">COMBOS</label>
-                        <select name="select_combos1" id="select_combos1" class="form-control "  >
-                            <option value="0">Seleccione una Divisa</option>
-                            <option value="1">Nuevo Sol (PEN)</option>
-                            <option value="2">Dolaar Estadounidense (USD)</option>
-                            <option value="3">Euro(EUR)</option>
-                            <option value="4">Yen Japones (JPY)</option>
-
-                        </select>
-                        <br>
-                    </div>
-                    <div class="col-sm-6">
-
-                        <label for="select_combos2" class="col-form-label">COMBOS</label>
-
-                        <select name="select_combos2" id="select_combos2" class="form-control" >
-
-                            <option value="0">Seleccione una Divisa</option>
-                            <option value="1">Nuevo Sol (PEN)</option>
-                            <option value="2">Dolar Estadounidense (USD)</option>
-                            <option value="3">Euro(EUR)</option>
-                            <option value="4">Yen Japones (JPY)</option>
-
-                        </select>
-
-                        <br>
-
-                    </div>
-
-                </div>
-
                 <div class="row">
                     <div class="col-sm-8">
-                        <button type="submit" class="btn btn-primary form-control">Calcular</button>
+                        <button type="submit" class="btn btn-dark form-control">Calcular</button>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#" class="btn btn-danger form-control">Cancelar</a>
+                        <a href="#" class="btn btn-dark form-control">Cancelar</a>
                     </div>
                 </div>
+
 
             }
             <br />
-            @*<small class="form-text text-black-50">Su Metabolismo es:</small>*@
+            <small class="form-text text-black-50">Precio:</small>
             <input type="text" class="form-control" value="@ViewBag.valor1" readonly />
 
             <br />
