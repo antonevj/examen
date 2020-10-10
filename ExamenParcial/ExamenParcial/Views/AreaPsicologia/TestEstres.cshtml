@@ -7,589 +7,584 @@
 
 <article>
 
-    <div class="row justify-content-center">
-        <div class="col-sm-8">
-            <br />
-            <br />
-            <br />
-            <br />
-            <h2>Servicio de test de estrés laboral</h2>
 
-            @using (Html.BeginForm("TestEstres", "AreaPsicologia", FormMethod.Post))
-            {
-
-
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            @Html.Label("nombre", "nombre")
-                            @Html.TextBox("nombre", null, new { @class = "form-control", id = "idnombre", type = "text", required = String.Empty })
-                            <small class="form-text text-black-50">Ingrese Nombre</small>
-                        </div>
-                    </div>
-
-                </div>
-                <table class="table table-striped table-hover">
-                    <thead class="thead-dark">
-                        @*titulo*@
-                        <tr>
-                            <th style="width: 40%"><h1>Sintomas </h1></th>
-                            <th style="width: 10%">
-                                <p>  Nunca </p>
-                                @Html.Label("rdb1", "(1)", new { @class = "form-check-label" })
-                            </th>
-                            <th style="width: 10%">
-                                <p>  Casi Nunca </p>
-                                @Html.Label("rdb2", "(2)", new { @class = "form-check-label" })
-                            </th>
-                            <th style="width: 10%">
-                                <p>   Pocas Veces </p>
-                                @Html.Label("rdb3", "(3)", new { @class = "form-check-label" })
-
-                            </th>
-                            <th style="width: 10%">
-                                <p>   Algunas Veces </p>
-                                @Html.Label("rdb4", "(4)", new { @class = "form-check-label" })
-
-                            </th>
-                            <th style="width: 10%">
-                                <p>   Relativamente Frecuente </p>
-                                @Html.Label("rdb5", "(5)", new { @class = "form-check-label" })
-
-                            </th>
-                            <th style="width: 10%">
-                                <p>    Muy Frecuente </p>
-                                @Html.Label("rdb6", "(6)", new { @class = "form-check-label" })
-
-
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @*parte 1*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Imposibilidad de conciliar el sueño.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-
-                                    @Html.RadioButton("Sintomas1", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-
-                                    @Html.RadioButton("Sintomas1", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-
-                                    @Html.RadioButton("Sintomas1", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-
-                                    @Html.RadioButton("Sintomas1", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-
-                                    @Html.RadioButton("Sintomas1", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-
-                                    @Html.RadioButton("Sintomas1", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 2*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Jaquecas y dolores de cabeza.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas2", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas2", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas2", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas2", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas2", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas2", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 3*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Indigestiones o molestias gastrointestinales.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas3", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas3", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas3", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas3", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas3", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas3", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 4*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Sensación de cansancio extremo o agotamiento.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas4", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas4", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas4", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas4", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas4", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas4", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 5*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Tendencia de comer, beber o fumar más de lo habitual.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas5", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas5", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas5", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas5", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas5", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas5", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 6*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label>Disminución del interés sexual.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas6", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas6", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas6", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas6", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas6", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas6", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 7*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label>Respiración entrecortada o sensación de ahogo</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas7", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas7", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas7", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas7", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas7", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas7", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 8*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Disminución del apetito.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas8", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas8", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas8", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas8", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas8", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas8", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 9*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label>
-                                        Temblores musculares (por ejemplo tics nerviosos o
-                                        parpadeos).
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas9", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas9", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas9", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas9", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas9", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas9", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 10*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label>
-                                        Pinchazos o sensaciones dolorosas en distintas partes
-                                        del cuerpo.
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas10", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas10", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas10", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas10", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas10", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas10", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 11*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Tentaciones fuertes de no levantarse por la mañana. </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas11", "11", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas11", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas11", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas11", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas11", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas11", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                        @*parte 12*@
-                        <tr>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <label> Tendencias a sudar o palpitaciones.</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas12", "1", true, new { id = "rdb1", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas12", "2", false, new { id = "rdb2", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas12", "3", false, new { id = "rdb3", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas12", "4", false, new { id = "rdb4", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas12", "5", false, new { id = "rdb5", @class = "form-check-input" })
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    @Html.RadioButton("Sintomas12", "6", false, new { id = "rdb6", @class = "form-check-input" })
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
                 <br />
-                <div class="row">
-                    <div class="col-sm-6">
-                        <button type="submit" id="calcular" class="btn btn-dark form-control">ENVIAR DATOS</button>
+                <br />
+                <br />
+                <br />
+                <h2>Servicio de test de estrés laboral</h2>
+
+                @using (Html.BeginForm("TestEstres", "AreaPsicologia", FormMethod.Post))
+                {
+
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                @Html.Label("nombre", "nombre")
+                                @Html.TextBox("nombre", null, new { @class = "form-control", id = "idnombre", type = "text", required = String.Empty })
+                                <small class="form-text text-black-50">Ingrese Nombre</small>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-sm-6">
+                    <table class="table table-striped table-hover">
+                        <thead class="thead-dark">
+                            @*titulo*@
+                            <tr>
+                                <th style="width: 40%"><h1>Sintomas </h1></th>
+                                <th style="width: 10%">
+                                    <p>  Nunca </p>
+                                    @Html.Label("rdb1", "(1)", new { @class = "form-check-label" })
+                                </th>
+                                <th style="width: 10%">
+                                    <p>  Casi Nunca </p>
+                                    @Html.Label("rdb2", "(2)", new { @class = "form-check-label" })
+                                </th>
+                                <th style="width: 10%">
+                                    <p>   Pocas Veces </p>
+                                    @Html.Label("rdb3", "(3)", new { @class = "form-check-label" })
 
-                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                            VER RESULTADO
-                        </button>
+                                </th>
+                                <th style="width: 10%">
+                                    <p>   Algunas Veces </p>
+                                    @Html.Label("rdb4", "(4)", new { @class = "form-check-label" })
 
-                    </div>
-                </div>
+                                </th>
+                                <th style="width: 10%">
+                                    <p>   Relativamente Frecuente </p>
+                                    @Html.Label("rdb5", "(5)", new { @class = "form-check-label" })
 
-            }
+                                </th>
+                                <th style="width: 10%">
+                                    <p>    Muy Frecuente </p>
+                                    @Html.Label("rdb6", "(6)", new { @class = "form-check-label" })
 
 
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*parte 1*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Imposibilidad de conciliar el sueño.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">RESPUESTA: Test de Estres Laboral</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                        @Html.RadioButton("Sintomas1", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+
+                                        @Html.RadioButton("Sintomas1", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+
+                                        @Html.RadioButton("Sintomas1", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+
+                                        @Html.RadioButton("Sintomas1", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+
+                                        @Html.RadioButton("Sintomas1", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+
+                                        @Html.RadioButton("Sintomas1", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 2*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Jaquecas y dolores de cabeza.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas2", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas2", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas2", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas2", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas2", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas2", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 3*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Indigestiones o molestias gastrointestinales.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas3", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas3", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas3", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas3", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas3", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas3", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 4*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Sensación de cansancio extremo o agotamiento.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas4", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas4", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas4", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas4", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas4", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas4", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 5*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Tendencia de comer, beber o fumar más de lo habitual.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas5", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas5", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas5", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas5", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas5", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas5", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 6*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label>Disminución del interés sexual.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas6", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas6", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas6", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas6", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas6", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas6", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 7*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label>Respiración entrecortada o sensación de ahogo</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas7", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas7", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas7", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas7", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas7", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas7", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 8*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Disminución del apetito.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas8", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas8", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas8", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas8", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas8", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas8", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 9*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label>
+                                            Temblores musculares (por ejemplo tics nerviosos o
+                                            parpadeos).
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas9", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas9", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas9", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas9", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas9", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas9", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 10*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label>
+                                            Pinchazos o sensaciones dolorosas en distintas partes
+                                            del cuerpo.
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas10", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas10", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas10", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas10", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas10", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas10", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 11*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Tentaciones fuertes de no levantarse por la mañana. </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas11", "11", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas11", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas11", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas11", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas11", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas11", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                            @*parte 12*@
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <label> Tendencias a sudar o palpitaciones.</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas12", "1", true, new { id = "rdb1", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas12", "2", false, new { id = "rdb2", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas12", "3", false, new { id = "rdb3", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas12", "4", false, new { id = "rdb4", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas12", "5", false, new { id = "rdb5", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButton("Sintomas12", "6", false, new { id = "rdb6", @class = "form-check-input" })
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="submit" id="calcular" class="btn btn-dark form-control">ENVIAR DATOS</button>
+                        </div>
+                        <div class="col-sm-6">
+
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+                                VER RESULTADO
                             </button>
+
                         </div>
-                        <div class="modal-body">
-                            @ViewBag.nombre
-                            <br />
-                            @ViewBag.total
-                            <br />
-                            @ViewBag.resultado
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+
+                }
+
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">RESPUESTA: Test de Estres Laboral</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                @ViewBag.nombre
+                                <br />
+                                @ViewBag.total
+                                <br />
+                                @ViewBag.resultado
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
 
-
-
-
-
         </div>
-
-
-        </div>
-
-
 
     @*<script src="js/mis_scripts.js"></script>*@
 </article>

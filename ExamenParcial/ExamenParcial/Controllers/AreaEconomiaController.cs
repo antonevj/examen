@@ -20,9 +20,9 @@ namespace ExamenParcial.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Divisas(float cantidad, string select_combos1, string select_combos2)
+        public ActionResult Divisas(double cantidad, string select_combos1, string select_combos2)
         {
-            float valor1=0;
+            double valor1=0;
            
 
                 if (select_combos1 == "1" && select_combos2 == "2")
@@ -95,6 +95,7 @@ namespace ExamenParcial.Controllers
                 valor1 = cantidad;
             }
 
+            valor1 = Math.Round(valor1,2);
 
             ViewBag.select_combos1 = select_combos1;
             ViewBag.select_combos2 = select_combos2;
