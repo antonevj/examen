@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "employee";
+}
+
+<article>
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <a href="~/Arealiteratura/authors" class="btn btn-primary btn-lg" role="button" aria-disabled="true">autores</a>
+        <a href="~/Arealiteratura/sales" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">salas</a>
+        <a href="~/Arealiteratura/titles" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">titulos</a>
+        <a href="~/Arealiteratura/employee" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">empleados</a>
+
+    </div>
+    <br />
+    <br />
+    <h2>empleados</h2>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width:10%">ID</th>
+                        <th style="width:25%">nombre</th>
+                        <th style="width:20%">signo</th>
+                        <th style="width:25%">segubndo nombre</th>
+                        <th style="width:20%">fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.emp_id</td>
+                            <td>@item.fname</td>
+                            <td>@item.minit</td>
+                            <td>@item.lname</td>
+                            <td>@item.hire_date</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</article>
+

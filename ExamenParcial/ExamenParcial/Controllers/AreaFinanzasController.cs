@@ -24,20 +24,19 @@ namespace ExamenParcial.Controllers
         [HttpPost]
         public ActionResult interes(float capital, float tasa, float tiempo, string inte)
         {
-            float rpta=0;
+            double rpta=0;
 
+          
             if (inte == "A")
             {
-                rpta = (float)(capital * (tasa / 100) * tiempo);
+                rpta = (float)((capital * (tasa / 100)) * tiempo);
             }
             if(inte=="B")
             {
-                rpta = (float)(capital * (1 + (tasa / 100)) * tiempo);
+                
+                rpta = capital * Math.Pow((1 + (tasa / 100)),tiempo);
             }
-
-
-
-
+            rpta = Math.Round(rpta, 2);
             ViewBag.rpta = rpta;
             ViewBag.capital = capital;
             ViewBag.tasa = tasa;
