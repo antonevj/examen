@@ -55,6 +55,10 @@ namespace ExamenParcial.Controllers
             {
                 valor1 = cantidad * 105.95f;
             }
+            else if (select_combos1 == "2" && select_combos2 == "2")
+            {
+                valor1 = cantidad;
+            }
 
             //parte 3
             if (select_combos1 == "3" && select_combos2 == "1")
@@ -69,6 +73,10 @@ namespace ExamenParcial.Controllers
             {
                 valor1 = cantidad * 124.74f;
             }
+            else if (select_combos1 == "3" && select_combos2 == "3")
+            {
+                valor1 = cantidad;
+            }
             //parte 4
             if (select_combos1 == "4" && select_combos2 == "1")
             {
@@ -81,6 +89,10 @@ namespace ExamenParcial.Controllers
             else if (select_combos1 == "4" && select_combos2 == "3")
             {
                 valor1 = cantidad * 0.0080f;
+            }
+            else if (select_combos1 == "4" && select_combos2 == "4")
+            {
+                valor1 = cantidad;
             }
 
 
