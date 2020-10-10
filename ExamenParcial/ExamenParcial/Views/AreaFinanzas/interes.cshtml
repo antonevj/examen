@@ -3,139 +3,162 @@
     ViewBag.Title = "interes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link href="~/Content/menu.css" rel="stylesheet" />
 
 
 @section Misestilos{
 
-    <script src="~/Scripts/popper.js"></script>
+   
     
 }
 
 
 <article>
-    <div class="row justify-content-center" style="border:medium">
-        <div class="card " style="width: 70rem;">
-            <img src="https://www.consumer.es/wp-content/uploads/2019/07/img_conversor-moneda.hd_-1280x720.jpg" class="card-img-top rounded-pill" alt="...">
+
+    <div class="ancho-let">
+        <div class="letras-slider">
+            <h1 class="animated zoomIn" style="color:black">INTERES SIMPLE Y COMPUESTO</h1>
+            <h3 class="animated slideInUp" style="color:black">
+                Antes de entrar en detalle veamos qué es el interés. Es un índice por medio del cual se mide la rentabilidad de los ahorros y las inversiones. También sirve para medir el costo de un crédito bancario. Este costo se representa como un porcentaje referido con el total de la inversión o el crédito. En este sentido cabe destacar que al momento de contratar un producto bancario que genere rentabilidad buscamos que la tasa de interés sea la más alta ya que es un interés que nos pagará el banco, mientras que cuando solicitamos un crédito buscamos que la tasa de interés sea baja ya que es un interés que pagaremos al banco.
+
+            </h3>
         </div>
+    </div>
+    <div class="cu">
+        <img src="~/Content/fin.jpg" width="1360" height="620" alt="Alternate Text" />
+    </div>
+    <div class="row justify-content-center" style="border:medium">
+        <div class="col-sm-8">
+            <br />
+           
 
-        <div class="row justify-content-center">
-            <div class="col-sm-12">
-                <br />
-                <br />
-                
-                <h2>CALCULADORA DE INTERES </h2>
-                @using (Html.BeginForm("interes", "AreaFinanzas", FormMethod.Post))
-                {
+            <div class="row justify-content-center">
+               
+                    <div class="col-sm-8">
+                        <br />
+                        <br />
 
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <div class="card">
-                                    <div class="card-header">Simple</div>
-                                    <div class="card-body">
-                                        <div class="form-check form-check-inline">
-                                            @Html.Label("rdbsimple", "Simple", new { @class = "form-check-label" })
-                                            @Html.RadioButton("inte", "A", true, new { id = "rdbsimple", @class = "form-check-input" })
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            @Html.Label("rdbcompuesto", "Compuesto", new { @class = "form-check-label" })
-                                            @Html.RadioButton("inte", "B", false, new { id = "rdbcompuesto", @class = "form-check-input" })
+                        <h2>Interés Simple y Compuesto Calculadora </h2>
+                        <br />
+                        @using (Html.BeginForm("interes", "AreaFinanzas", FormMethod.Post))
+                        {
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="card">
+                                            <div class="card-header">TIPOS DE INTERESES</div>
+                                            <div class="card-body">
+                                                <div class="form-check form-check-inline">
+                                                    @Html.Label("rdbsimple", "Simple", new { @class = "form-check-label" })
+                                                    @Html.RadioButton("inte", "A", true, new { id = "rdbsimple", @class = "form-check-input" })
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    @Html.Label("rdbcompuesto", "Compuesto", new { @class = "form-check-label" })
+                                                    @Html.RadioButton("inte", "B", false, new { id = "rdbcompuesto", @class = "form-check-input" })
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                @Html.Label("capital", "capital")
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        @Html.Label("capital", "capital")
 
-                                @Html.TextBox("capital", null, new
-                                {
-                                    @class = "form-control",
-                                    id = "idcapital",
-                                   // type = "number",
-                                    //step = 1,
-                                   required = "",
-                                    min = 0
-                                })
+                                        @Html.TextBox("capital", null, new
+                                        {
+                                            @class = "form-control",
+                                            id = "idcapital",
+                                           // type = "number",
+                                            //step = 1,
+                                           required = "",
+                                            min = 0
+                                        })
 
-                                <small class="form-text text-muted">
-                                    Ingrese su capital
-                                </small>
+                                        <small class="form-text text-muted">
+                                            Ingrese su capital
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        @Html.Label("tasa", "tasa")
+
+                                        @Html.TextBox("tasa", null, new
+                                        {
+                                            @class = "form-control",
+                                            id = "idtasa",
+                                            type = "number",
+                                            step = 1,
+
+                                            min = 0,
+                                            required = String.Empty
+                                        })
+
+                                        <small class="form-text text-muted">
+                                            Ingrese la  tasa de interes
+                                        </small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        @Html.Label("tiempo", "tiempo")
+
+                                        @Html.TextBox("tiempo", null, new
+                                   {
+                                       @class = "form-control",
+                                       id = "idtiempo",
+                                       type = "number",
+                                       step = 1,
+                                       min = 0,
+                                       required = String.Empty
+                                   })
+
+                                        <small class="form-text text-muted">
+                                            Ingrese el tiempo en años
+                                        </small>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                @Html.Label("tasa", "tasa")
+                            <div class="row">
+                                <div class="col-sm-12">
 
-                                @Html.TextBox("tasa", null, new
-                                {
-                                    @class = "form-control",
-                                    id = "idtasa",
-                                    type = "number",
-                                    step = 1,
+                                    <button type="submit" class="btn btn-primary form-control">
+                                        Calcular
+                                    </button>
 
-                                    min = 0,
-                                    required = String.Empty
-                                })
+                                </div>
 
-                                <small class="form-text text-muted">
-                                    Ingrese la  tasa de interes
-                                </small>
+
+
+
                             </div>
-                        </div>
+                        }
 
+                        <br />
+                        <h4>TOTAL: </h4>
+                        <input type="text" class="form-control" value="@ViewBag.rpta"
+                               readonly />
 
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                @Html.Label("tiempo", "tiempo")
-
-                                @Html.TextBox("tiempo", null, new
-                           {
-                               @class = "form-control",
-                               id = "idtiempo",
-                               type = "number",
-                               step = 1,
-                               min = 0,
-                               required = String.Empty
-                           })
-
-                                <small class="form-text text-muted">
-                                    Ingrese el tiempo en años
-                                </small>
-                            </div>
-                        </div>
+                       
                     </div>
+                    
+                
+              
 
-                    <div class="row">
-                        <div class="col-sm-12">
-
-                            <button type="submit" class="btn btn-primary form-control">
-                                Calcular
-                            </button>
-
-                        </div>
-
-
-
-
-                    </div>
-                }
-
-                <br />
-                <h4>INTERES: </h4>
-                <input type="text" class="form-control" value="@ViewBag.rpta"
-                       readonly />
-
+               
             </div>
         </div>
+
     </div>
-       
+
 
 </article>
 <br />
