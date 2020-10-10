@@ -9,6 +9,10 @@
 
     <div class="row justify-content-center">
         <div class="col-sm-8">
+            <br />
+            <br />
+            <br />
+            <br />
             <h2>Servicio de test de estrés laboral</h2>
 
             @using (Html.BeginForm("TestEstres", "AreaPsicologia", FormMethod.Post))
@@ -19,7 +23,7 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             @Html.Label("nombre", "nombre")
-                            @Html.TextBox("nombre", null, new { @class = "form-control", id = "idnombre", type = "text", required = String.Empty})
+                            @Html.TextBox("nombre", null, new { @class = "form-control", id = "idnombre", type = "text", required = String.Empty })
                             <small class="form-text text-black-50">Ingrese Nombre</small>
                         </div>
                     </div>
@@ -563,6 +567,8 @@
                         </div>
                         <div class="modal-body">
                             @ViewBag.nombre
+                            <br />
+                            @ViewBag.total
                             <br />
                             @ViewBag.resultado
                         </div>
