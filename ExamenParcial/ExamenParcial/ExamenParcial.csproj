@@ -106,6 +106,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\economia.jpg" />
+    <Content Include="Content\fin.jpg" />
     <Content Include="Content\finanzas.jpg" />
     <Content Include="Content\fondo.png" />
     <Content Include="Content\layout.css" />
